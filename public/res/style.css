@@ -1,0 +1,118 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #141414;
+    background-image: url("gun-metal.png");
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#equalizer-board {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    background-color: #636363;
+    background-image: url("brushed-alum.png");
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.title {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+    font-size: 40px;
+    font-style: italic;
+}
+
+.sliders-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.slider-segment {
+    width: 23px;
+    height: 400px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.slider-segment input[type="range"] {
+    -webkit-appearance: slider-vertical;
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+}
+
+.slider-segment span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.buttons-container {
+    width: 100%;
+    height: 150px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+}
+
+#reset-botton {
+    display: inline-block;
+    width: 150px;
+    height: 100%;
+    background-color: #5e5e5e;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 32px;
+    font-family: inherit;
+}
+
+#bass-boost-botton {
+    display: inline-block;
+    flex-grow: 1;
+    height: 100%;
+    background-color: #000000;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 48px;
+    font-family: inherit;
+    margin-left: 20px;
+}
+
+.button-animate {
+    animation-name: button-animation;
+    animation-duration: 2s;
+}
+
+@keyframes button-animation {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(15);
+        opacity: 0;
+    }
+}
